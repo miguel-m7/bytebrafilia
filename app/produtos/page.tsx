@@ -10,6 +10,8 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import {allProducts} from "@/data/products"
+
 
 export default function ProdutosPage() {
   const [searchTerm, setSearchTerm] = useState("")
@@ -18,133 +20,6 @@ export default function ProdutosPage() {
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 8
 
-  const allProducts = [
-    // Produtos Novos - Notebooks
-    {
-      id: 1,
-      nome: "Dell Inspiron 15 3000",
-      categoria: "notebooks",
-      condicao: "novo",
-      preco: 2499.99,
-      imagem: "/dell-inspiron-laptop.png",
-      descricao: "Notebook Dell com processador Intel Core i5, 8GB RAM, SSD 256GB",
-      garantia: "12 meses",
-    },
-    {
-      id: 2,
-      nome: "Lenovo IdeaPad 3",
-      categoria: "notebooks",
-      condicao: "novo",
-      preco: 2199.99,
-      imagem: "/lenovo-ideapad.png",
-      descricao: "Notebook Lenovo AMD Ryzen 5, 8GB RAM, SSD 512GB",
-      garantia: "12 meses",
-    },
-    {
-      id: 3,
-      nome: "Acer Aspire 5",
-      categoria: "notebooks",
-      condicao: "novo",
-      preco: 2799.99,
-      imagem: "/acer-aspire-laptop.png",
-      descricao: "Notebook Acer Intel Core i7, 16GB RAM, SSD 512GB",
-      garantia: "12 meses",
-    },
-    // Produtos Novos - PCs
-    {
-      id: 4,
-      nome: "PC Gamer Completo",
-      categoria: "pcs",
-      condicao: "novo",
-      preco: 4999.99,
-      imagem: "/gaming-pc-setup.png",
-      descricao: "PC Gamer AMD Ryzen 7, RTX 4060, 16GB RAM, SSD 1TB",
-      garantia: "12 meses",
-    },
-    {
-      id: 5,
-      nome: "PC Office Básico",
-      categoria: "pcs",
-      condicao: "novo",
-      preco: 1899.99,
-      imagem: "/office-desktop-computer.png",
-      descricao: "PC para escritório Intel Core i3, 8GB RAM, SSD 256GB",
-      garantia: "12 meses",
-    },
-    // Produtos Novos - Placas de Vídeo
-    {
-      id: 6,
-      nome: "NVIDIA RTX 4060",
-      categoria: "placas-video",
-      condicao: "novo",
-      preco: 1899.99,
-      imagem: "/nvidia-rtx-4060-graphics-card.png",
-      descricao: "Placa de vídeo NVIDIA RTX 4060 8GB GDDR6",
-      garantia: "24 meses",
-    },
-    {
-      id: 7,
-      nome: "AMD RX 7600",
-      categoria: "placas-video",
-      condicao: "novo",
-      preco: 1699.99,
-      imagem: "/amd-rx-7600-graphics-card.png",
-      descricao: "Placa de vídeo AMD RX 7600 8GB GDDR6",
-      garantia: "24 meses",
-    },
-    // Produtos Novos - Placas Mães
-    {
-      id: 8,
-      nome: "ASUS Prime B450M",
-      categoria: "placas-mae",
-      condicao: "novo",
-      preco: 399.99,
-      imagem: "/asus-motherboard.png",
-      descricao: "Placa mãe ASUS Prime B450M-A, Socket AM4, DDR4",
-      garantia: "36 meses",
-    },
-    // Produtos Semi-novos
-    {
-      id: 9,
-      nome: "Dell Latitude 5520",
-      categoria: "notebooks",
-      condicao: "seminovo",
-      preco: 1799.99,
-      imagem: "/dell-latitude-business-laptop.png",
-      descricao: "Notebook Dell seminovo, Intel Core i5, 8GB RAM, SSD 256GB",
-      garantia: "3 meses",
-    },
-    {
-      id: 10,
-      nome: "PC Gamer Usado",
-      categoria: "pcs",
-      condicao: "seminovo",
-      preco: 2999.99,
-      imagem: "/used-gaming-computer.png",
-      descricao: "PC Gamer seminovo, AMD Ryzen 5, GTX 1660, 16GB RAM",
-      garantia: "3 meses",
-    },
-    {
-      id: 11,
-      nome: "GTX 1660 Super",
-      categoria: "placas-video",
-      condicao: "seminovo",
-      preco: 899.99,
-      imagem: "/gtx-1660-super-graphics-card.png",
-      descricao: "Placa de vídeo NVIDIA GTX 1660 Super 6GB seminova",
-      garantia: "3 meses",
-    },
-    {
-      id: 12,
-      nome: "MSI B450M Pro",
-      categoria: "placas-mae",
-      condicao: "seminovo",
-      preco: 249.99,
-      imagem: "/msi-motherboard.png",
-      descricao: "Placa mãe MSI B450M Pro seminova, Socket AM4",
-      garantia: "3 meses",
-    },
-  ]
 
   const filteredProducts = allProducts.filter((product) => {
     const matchesSearch =

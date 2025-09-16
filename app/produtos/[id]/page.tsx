@@ -6,68 +6,12 @@ import { ArrowLeft, Shield, Truck, CreditCard, MessageCircle } from "lucide-reac
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import {allProducts} from "@/data/products"
 
 export default function ProdutoDetalhePage({ params }: { params: { id: string } }) {
   const productId = Number.parseInt(params.id)
 
-  // Same product data as in the main page
-  const allProducts = [
-    {
-      id: 1,
-      nome: "Dell Inspiron 15 3000",
-      categoria: "notebooks",
-      condicao: "novo",
-      preco: 2499.99,
-      imagem: "/dell-inspiron-laptop-detailed-view.png",
-      descricao: "Notebook Dell com processador Intel Core i5, 8GB RAM, SSD 256GB",
-      garantia: "12 meses",
-      especificacoes: {
-        Processador: "Intel Core i5-1135G7",
-        "Memória RAM": "8GB DDR4",
-        Armazenamento: "SSD 256GB",
-        Tela: '15.6" Full HD',
-        "Placa de Vídeo": "Intel Iris Xe",
-        "Sistema Operacional": "Windows 11",
-      },
-    },
-    {
-      id: 2,
-      nome: "Lenovo IdeaPad 3",
-      categoria: "notebooks",
-      condicao: "novo",
-      preco: 2199.99,
-      imagem: "/lenovo-ideapad-laptop-detailed-view.png",
-      descricao: "Notebook Lenovo AMD Ryzen 5, 8GB RAM, SSD 512GB",
-      garantia: "12 meses",
-      especificacoes: {
-        Processador: "AMD Ryzen 5 5500U",
-        "Memória RAM": "8GB DDR4",
-        Armazenamento: "SSD 512GB",
-        Tela: '15.6" Full HD',
-        "Placa de Vídeo": "AMD Radeon",
-        "Sistema Operacional": "Windows 11",
-      },
-    },
-    {
-      id: 9,
-      nome: "Dell Latitude 5520",
-      categoria: "notebooks",
-      condicao: "seminovo",
-      preco: 1799.99,
-      imagem: "/dell-latitude-business-laptop-detailed-view.png",
-      descricao: "Notebook Dell seminovo, Intel Core i5, 8GB RAM, SSD 256GB",
-      garantia: "3 meses",
-      especificacoes: {
-        Processador: "Intel Core i5-1145G7",
-        "Memória RAM": "8GB DDR4",
-        Armazenamento: "SSD 256GB",
-        Tela: '15.6" Full HD',
-        "Placa de Vídeo": "Intel Iris Xe",
-        "Sistema Operacional": "Windows 11",
-      },
-    },
-    // Add more products as needed
-  ]
+
 
   const produto = allProducts.find((p) => p.id === productId)
 
