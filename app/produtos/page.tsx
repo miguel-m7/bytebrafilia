@@ -10,7 +10,7 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import {allProducts} from "@/data/products"
+import {allProducts, categorias} from "@/data/products"
 
 
 export default function ProdutosPage() {
@@ -79,13 +79,14 @@ export default function ProdutosPage() {
               <SelectTrigger className="w-full md:w-48 bg-slate-700 border-slate-600 text-white">
                 <SelectValue placeholder="Categoria" />
               </SelectTrigger>
-              <SelectContent>
+            <SelectContent>
                 <SelectItem value="todos">Todas Categorias</SelectItem>
-                <SelectItem value="notebooks">Notebooks</SelectItem>
-                <SelectItem value="pcs">PC's</SelectItem>
-                <SelectItem value="placas-video">Placas de Vídeo</SelectItem>
-                <SelectItem value="placas-mae">Placas Mães</SelectItem>
-              </SelectContent>
+              {categorias.map(categoria => (
+                <SelectItem key={categoria} value={categoria}>
+                  {categoria}
+                </SelectItem>
+              ))}
+            </SelectContent>
             </Select>
             <Select value={selectedCondition} onValueChange={setSelectedCondition}>
               <SelectTrigger className="w-full md:w-48 bg-slate-700 border-slate-600 text-white">

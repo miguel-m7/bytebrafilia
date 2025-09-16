@@ -1,3 +1,16 @@
+export const categorias = [
+  "Armazenamento",
+  "Cabos",
+  "Adaptadores",
+  "Componentes",
+  "Memória",
+  "Periféricos",
+  "Câmeras",
+  "Monitores",
+  "Áudio",
+  "Rede"
+];
+
 export const allProducts = [
   {
     "id": 1,
