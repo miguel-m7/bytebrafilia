@@ -70,28 +70,28 @@ export const allProducts = [
       NCM: "84713019.0"
     }
   },
-  {
-    id: 4,
-    nome: "NOTEBOOK DELL MODELO INSPIRION 15 7000 - 7537 P36F INTEL CORE I7 4510U 4º GERAÇÃO  16 GB RAM SSD 240 GB TELA FULL HD",
-    categoria: "Notebook",
-    condicao: "seminovo",
-    preco: 1400.00,
-    imagem: "/products/4.jpg",
-    descricao: "Notebook Dell Inspirion 15 7000, i7 4510U 4ª geração, 16GB RAM, SSD 240GB, Tela Full HD",
-    garantia: "6 meses",
-    especificacoes: {
-      Processador: "Intel Core i7 4510U 4ª geração",
-      RAM: "16GB",
-      Armazenamento: "240GB SSD",
-      Tela: "15.6'' Full HD",
-      NCM: "84713019.0"
-    }
-  },
+  // {
+  //   id: 4,
+  //   nome: "NOTEBOOK DELL MODELO INSPIRION 15 7000 - 7537 P36F INTEL CORE I7 4510U 4º GERAÇÃO  16 GB RAM SSD 240 GB TELA FULL HD",
+  //   categoria: "Notebook",
+  //   condicao: "seminovo",
+  //   preco: 1400.00,
+  //   imagem: "/products/4.jpg",
+  //   descricao: "Notebook Dell Inspirion 15 7000, i7 4510U 4ª geração, 16GB RAM, SSD 240GB, Tela Full HD",
+  //   garantia: "6 meses",
+  //   especificacoes: {
+  //     Processador: "Intel Core i7 4510U 4ª geração",
+  //     RAM: "16GB",
+  //     Armazenamento: "240GB SSD",
+  //     Tela: "15.6'' Full HD",
+  //     NCM: "84713019.0"
+  //   }
+  // },
   {
     id: 5,
     nome: "NOTEBOOK AVELL I7 16GB DDR5 A52 ION 12º GERAÇÃO",
     categoria: "Notebook",
-    condicao: "seminovo",
+    condicao: "novo",
     preco: 5699.00,
     imagem: "/products/5.webp",
     descricao: "Notebook Avell i7, 16GB DDR5, A52 ION, 12ª geração",
