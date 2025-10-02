@@ -40,7 +40,7 @@ export const allProducts = [
     nome: "NOTEBOOK HP INTEL CORE I3 11º modelo 15-dy2713st",
     categoria: "Notebook",
     condicao: "seminovo",
-    preco: 1300.00,
+    preco: 1400.00,
     imagem: "/products/2.jpg",
     descricao: "Notebook HP Intel Core i3 11ª geração, modelo 15-dy2713st",
     garantia: "6 meses",
