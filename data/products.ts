@@ -100,7 +100,8 @@ export const allProducts = [
       Processador: "Intel Core i7 12ª geração",
       RAM: "16GB DDR5",
       Modelo: "A52 ION",
-      NCM: "84713019.0"
+      NCM: "84713019.0",
+      GPU: "GeForce RTX 4050",
     }
   },
   {
