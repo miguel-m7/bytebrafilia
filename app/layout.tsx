@@ -1,8 +1,8 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, JetBrains_Mono } from "next/font/google"
+import { Inter, Orbitron } from "next/font/google"
 import "./globals.css"
-import MetaPixel from '@/components/MetaPixel';
+import MetaPixel from "@/components/MetaPixel"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -10,17 +10,17 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-const jetbrainsMono = JetBrains_Mono({
+const orbitron = Orbitron({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-jetbrains-mono",
+  variable: "--font-orbitron",
 })
 
 export const metadata: Metadata = {
-  title: "Asa Informática - Manutenção, Conserto e Vendas | Asa Norte",
+  title: "Dia das Crianças Gamer - Gire e Ganhe Descontos | PC Gamer",
   description:
-    "Especialistas em manutenção, conserto e venda de computadores e periféricos na Asa Norte. Mais de 10 anos de experiência. Asa Norte 207/208, Bloco A, Loja 12.",
-  keywords: "informática, manutenção computador, conserto notebook, asa norte, brasília, periféricos",
+    "Promoção especial de Dia das Crianças! Gire a roleta e ganhe descontos incríveis em PCs Gamer, periféricos e muito mais. Monte o setup dos sonhos!",
+  keywords: "pc gamer, dia das crianças, promoção gamer, setup gamer, desconto pc gamer, periféricos gamer",
 }
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}>
+    <html lang="pt-BR" className={`${inter.variable} ${orbitron.variable} antialiased`}>
       <body className="font-sans">
         <MetaPixel pixelId="774472648895114" />
         {children}
